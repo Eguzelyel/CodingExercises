@@ -18,12 +18,12 @@ print(sorted_data)
 
 # Print the first N stock
 def first_n_traded_stock(sorted_list, n):
-    print(sorted_list[-n:])
+    print(sorted_list[:-n-1:-1])
 
 
 first_n_traded_stock(sorted_data, 3)
 
-# There is also a heapq implementation which is O(nlogn)
+# There is also a heapq implementation which is O(NlogN)
 # https://stackoverflow.com/a/38833175/9209546
 
 import heapq
