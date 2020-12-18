@@ -50,6 +50,9 @@ class Employee:
     def __str__(self):
         return "{}, {}".format(self.display_name(), self.email)
 
+    def __len__(self):
+        return len(self.display_name())
+
 
 class Developer(Employee):
     pay_raise_rate = 1.07
@@ -86,12 +89,11 @@ emp1 = Employee("Tea", "Drinker", 112000)
 emp2 = Developer("Coffee", "Drinker", 69000, "Python")
 mgr1 = Manager("Bar", "Tender", 32000, [emp2])
 
-print(repr(emp1))
-print(str(emp1))
+
+print("Choose statements from the notes to run.")
 
 
-
-######### NOTES #########  NOTES ######### NOTES #########
+# --------- NOTES --------- NOTES --------- NOTES ---------
 # Add Attribute - Not the best way
 # emp1.explicit_attribute = "explicit_attribute"
 
@@ -152,3 +154,8 @@ print(str(emp1))
 # print(isinstance(mgr1, Manager))
 # print(isinstance(mgr1, Developer))
 # print(issubclass(Developer, Employee))
+
+# Special Methods - Magic/Dunder
+# print(repr(emp1))
+# print(str(emp1))
+# print(emp1)
