@@ -1,6 +1,7 @@
 from sortedcontainers import SortedList
 
 # Implementation of SortedList
+# http://www.grantjenks.com/docs/sortedcontainers/introduction.html#sorted-list
 # It keeps the sorted structure
 # Insertion O(N) -> .add((val, "key"))
 # Access O(1)
